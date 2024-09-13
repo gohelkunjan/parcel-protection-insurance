@@ -1,0 +1,209 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.parcel-protection-help .modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+.parcel-protection-help .modal.is-visible {
+  visibility: visible;
+}
+.parcel-protection-help .modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+.parcel-protection-help .modal.is-visible .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.parcel-protection-help .modal-wrapper {
+  position: absolute;
+  z-index: 9999;
+  top: 6em;
+  left: 50%;
+  width: 32em;
+  margin-left: -16em;
+  background-color: #fff;
+  box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
+}
+.parcel-protection-help .modal-transition {
+  transition: all 0.3s 0.12s;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.parcel-protection-help .modal.is-visible .modal-transition {
+  transform: translateY(0);
+  opacity: 1;
+}
+.parcel-protection-help .modal-header,
+.parcel-protection-help .modal-content {
+  padding: 1em;
+}
+.parcel-protection-help .modal-header {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.06);
+  border-bottom: 1px solid #e8e8e8;
+}
+.parcel-protection-help .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 15px;
+  border: 0;
+  font-size: 26px;
+  z-index: 999999;
+  background-color: transparent;
+  background: transparent;
+  color: red;
+}
+.parcel-protection-help button:not(:hover):not(:active):not(.has-background) {
+  background-color: transparent;
+  background: transparent;
+  color: red;
+}
+.parcel-protection-help .modal-heading {
+  font-size: 1.125em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.parcel-protection-help .modal-content > *:first-child {
+  margin-top: 0;
+}
+.parcel-protection-help .modal-content > *:last-child {
+  margin-bottom: 0;
+}
+.parcel-protection-get-insurance-amount {
+  width: 400px;
+  margin: 20px 0;
+}
+.woocommerce-checkout .parcel-protection-get-insurance-amount {
+  width: 100%;
+}
+.parcel-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.precent-content-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 85%;
+}
+.precent-content-left .percent-title {
+  width: 100%;
+  text-align: left;
+}
+.precent-content-left .percent-title strong {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.precent-content-left span {
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 70%;
+  line-height: 20px;
+}
+.precent-content-right {
+  width: 10%;
+  text-align: center;
+}
+.precent-content-left img {
+  margin-right: 10px;
+  max-width: 40px !important;
+}
+.precent-content-left a.modal-toggle {
+  text-align: center;
+}
+.precent-content-left a.modal-toggle img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  object-fit: contain;
+  cursor: pointer;
+}
+.precent-content-left a.modal-toggle:hover img {
+  opacity: 1;
+}
+.precent-content-right .switch input[type="checkbox"] {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: 0.7s;
+}
+.precent-content-right .switch input:checked[type="checkbox"] {
+  background: #1979c3;
+}
+.precent-content-right .switch input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  top: 2px;
+  left: 3px;
+  background: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.precent-content-right .switch input:checked[type="checkbox"]:before {
+  transform: translateX(21px);
+}
+.precent-content-price {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  position: relative;
+  margin-top: -5px;
+}
+.precent-content-right input[type="checkbox"]:checked:after {
+  opacity: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .precent-content-left span {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .parcel-protection-get-insurance-amount {
+    width: 100%;
+  }
+  .precent-content-left span {
+    width: 60%;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .precent-content-left {
+    width: 75%;
+  }
+  .precent-content-right {
+    width: 24%;
+  }
+}

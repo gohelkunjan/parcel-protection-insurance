@@ -1,0 +1,25 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.parcel-protection table th {
+  font-weight: bold;
+}
+.parcel-protection table.widefat {
+  padding: 15px;
+}
+.repeater-text-fields-wrapper td {
+  padding-left: 0;
+}
+.dynamic-heading span {
+  font-weight: bold;
+}
+.dynamic-table-content {
+  max-width: 420px;
+  width: 100%;
+  overflow-x: auto;
+}
+.dynamic-table-content tbody tr:first-child td:last-child button {
+  pointer-events: none;
+  filter: grayscale(1);
+}
